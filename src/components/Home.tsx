@@ -6,11 +6,10 @@ const Wrapper = styled.div`
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   color: ${({ theme }) => theme.text};
   padding: 10px;
-  margin-top: 25px;
 `;
 
 const Title = styled.h2`
