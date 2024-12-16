@@ -12,7 +12,7 @@ export const ThemeToggleButton = ({ onClick }: ThemeToggleButtonProps) => {
       whileHover={{ scale: 1.1 }}
       onClick={onClick}
     >
-      Toggle Theme
+      Byt Tema
     </Button>
   );
 };
