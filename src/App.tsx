@@ -16,7 +16,7 @@ export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <ThemeToggleButton onClick={toggleTheme} />
+      <ThemeToggleButton onClick={toggleTheme} themeName={theme.name} />
       <Home />
     </ThemeProvider>
   );

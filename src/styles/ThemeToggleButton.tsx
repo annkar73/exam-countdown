@@ -1,37 +1,40 @@
-import styled from 'styled-components';
-import { motion } from 'motion/react';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 interface ThemeToggleButtonProps {
   onClick: () => void;
+  themeName: string; // För att avgöra om det är light eller dark
 }
 
-export const ThemeToggleButton = ({ onClick }: ThemeToggleButtonProps) => {
+const SwitchContainer = styled.div`
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+  background-color: ${(props) => props.theme.toggleBg};
+  position: relative;
+`;
+
+const SwitchHandle = styled(motion.div)`
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: ${(props) => props.theme.toggleHandle};
+  position: absolute;
+`;
+
+export const ThemeToggleButton = ({ onClick, themeName }: ThemeToggleButtonProps) => {
   return (
-    <Button
-      whileTap={{ scale: 0.9, rotate: 90 }}
-      whileHover={{ scale: 1.1 }}
-      onClick={onClick}
-    >
-      Byt Tema
-    </Button>
+    <SwitchContainer onClick={onClick}>
+      <SwitchHandle
+        layout
+        initial={false}
+        animate={{ x: themeName === "dark" ? 30 : 0 }} // Flytta kulan
+        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+      />
+    </SwitchContainer>
   );
 };
-
-// Använd motion.button istället för en vanlig knapp
-const Button = styled(motion.button)`
-  position: fixed;
-  top: 50px;
-  right: 50px;
-  background: ${({ theme }) => theme.buttonBackground};
-  color: ${({ theme }) => theme.buttonText};
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-
-  &:hover {
-    background: ${({ theme }) => theme.buttonHoverBackground};
-    color: ${({ theme }) => theme.buttonHoverText};
-  }`
