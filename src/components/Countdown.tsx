@@ -6,6 +6,7 @@ const CountdownWrapper = styled.div`
   color: ${({ theme }) => theme.text};
   text-align: center;
   margin-bottom: 55px;
+  padding: 15px;
 `;
 
 const StyledNumber = styled.span`

@@ -8,8 +8,8 @@ export const lightTheme = {
   buttonHoverText: "#ffffff",
   toggleBg: "#1a1a1a",
   toggleHandle: "#ccc",
-  headerBg: "#d2d9ce", // Ljus bakgrund för headern
-  headerText: "#090909", // Textfärg för headern
+  headerBg: "#d2d9ce", 
+  headerText: "#090909", 
 };
 
 export const darkTheme = {
@@ -22,8 +22,8 @@ export const darkTheme = {
   buttonHoverText: "#ffffff",
   toggleBg: "#b8c3b1",
   toggleHandle: "#ccc",
-  headerBg: "#3f3f2f", // Mörk bakgrund för headern
-  headerText: "#f5f5f5", // Textfärg för headern
+  headerBg: "#3f3f2f", 
+  headerText: "#f5f5f5", 
 };
 
 export const getDefaultTheme = () =>
