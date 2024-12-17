@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.text};
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 5px;
 `;
 
 const Title = styled.h2`

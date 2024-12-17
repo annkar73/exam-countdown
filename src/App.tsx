@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, getDefaultTheme } from './styles/theme';
 import { GlobalStyles } from './styles/globalStyles';
 import { ThemeToggleButton } from './styles/ThemeToggleButton';
+import { Exit } from './components/Exit';
 
 export const App = () => {
   const [theme, setTheme] = useState(getDefaultTheme());
@@ -17,6 +18,7 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <ThemeToggleButton onClick={toggleTheme} themeName={theme.name} />
+      <Exit />
       <Home />
     </ThemeProvider>
   );

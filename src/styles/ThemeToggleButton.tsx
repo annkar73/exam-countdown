@@ -18,12 +18,20 @@ const SwitchContainer = styled.div`
   position: relative;
 `;
 
-const SwitchHandle = styled(motion.div)`
+const SwitchHandle = styled(motion.div)<{ themeName: string }>`
   width: 26px;
   height: 26px;
   border-radius: 50%;
   background-color: ${(props) => props.theme.toggleHandle};
   position: absolute;
+
+  /* Dynamisk URL för bakgrundsbild */
+  background-image: ${(props) =>
+    props.themeName === "dark"
+      ? "url('/assets/icons/moon.png')"
+      : "url('/assets/icons/sun.png')"};
+  background-size: cover; /* Anpassa storlek */
+  background-position: center; /* Centrerar ikonen */
 `;
 
 export const ThemeToggleButton = ({ onClick, themeName }: ThemeToggleButtonProps) => {
@@ -32,6 +40,7 @@ export const ThemeToggleButton = ({ onClick, themeName }: ThemeToggleButtonProps
       <SwitchHandle
         layout
         initial={false}
+        themeName={themeName} // Skicka ner temat här
         animate={{ x: themeName === "dark" ? 30 : 0 }} // Flytta kulan
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
       />
