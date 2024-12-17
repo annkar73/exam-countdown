@@ -14,14 +14,18 @@ const Wrapper = styled.div`
 
 const TextWrapper = styled.div`
     max-width: 90vw;
+
+    @media (min-width: 900px) {
+        max-width: 50vw;
+    }
 `;
 
-const Title = styled.h1`
-  margin-bottom: 20px;
+const Title = styled.h2`
+  font-size: 1.5rem;
 `;
 
-const Text = styled.p`
-    
+const TextBlock = styled.p`
+    margin: 10px;
 `;
 
 export const Exit = () => {
@@ -29,10 +33,18 @@ export const Exit = () => {
     <Wrapper>
       <Title>Slutet är nära!!</Title>
       <TextWrapper>
-      <Text>Vi närmar oss slutet på vår utbildning och börjar inse hur mycket vi har lärt oss.</Text>
-      <Text>Sedan hösten 2023 har vi arbetat oss genom HTML, CSS, Sass, JavaScript, TypeScript, Vue och React. Utöver det även grafiska verktyg för gränssnitt, agila arbetsmetoder och projektarbete, UX/UI, Testning, API-utveckling, arbetsmetodik för utvecklare och vår första LIA.</Text>
-      <Text>Nu kastar vi oss över examensarbete och ser fram emot vår nästa, och sista, LIA innan examen.</Text>
-      <Text>Inser vi ens hur mycket vi har lärt oss på den här tiden?</Text>
+      <TextBlock>
+        Vi närmar oss slutet på vår utbildning och börjar inse hur mycket vi faktiskt har lärt oss på knappt 1,5 år.
+    </TextBlock>
+      <TextBlock>
+        Sedan hösten 2023 har vi arbetat oss genom HTML, CSS, Sass, JavaScript, TypeScript, Vue och React. Utöver det även grafiska verktyg för gränssnitt, agila arbetsmetoder och projektarbete, UX/UI, Testning, API-utveckling, arbetsmetodik för utvecklare och vår första LIA (Lärande I Arbete).
+        </TextBlock>
+      <TextBlock>
+        Nu kastar vi oss över våra examensarbeten och ser fram emot vår nästa, och sista, LIA innan examen.
+        </TextBlock>
+      <TextBlock>
+        Inser vi ens själva hur mycket vi har lärt oss på den här tiden?
+        </TextBlock>
       </TextWrapper>
     </Wrapper>
   );

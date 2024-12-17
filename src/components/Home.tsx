@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  margin-bottom: 20px;
+  font-size: 1.5rem;
 `;
 
 export const Home = () => {

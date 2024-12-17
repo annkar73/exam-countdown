@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, getDefaultTheme } from './styles/theme';
 import { GlobalStyles } from './styles/globalStyles';
-import { ThemeToggleButton } from './styles/ThemeToggleButton';
 import { Exit } from './components/Exit';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 export const App = () => {
   const [theme, setTheme] = useState(getDefaultTheme());
@@ -17,9 +18,10 @@ export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <ThemeToggleButton onClick={toggleTheme} themeName={theme.name} />
+      <Header onThemeToggle={toggleTheme} themeName={theme.name} />
       <Exit />
       <Home />
+      <Footer />
     </ThemeProvider>
   );
 };
