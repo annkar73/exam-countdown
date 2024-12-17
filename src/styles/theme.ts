@@ -23,7 +23,7 @@ export const darkTheme = {
   toggleBg: "#b8c3b1",
   toggleHandle: "#ccc",
   headerBg: "#3f3f2f", // Mörk bakgrund för headern
-  headerText: "#ffffff", // Textfärg för headern
+  headerText: "#f5f5f5", // Textfärg för headern
 };
 
 export const getDefaultTheme = () =>
