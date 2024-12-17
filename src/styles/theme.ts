@@ -1,9 +1,9 @@
 export const lightTheme = {
   name: "light",
-  background: "#8d9e84",
+  background: "#b8c3b1",
   text: "#090909",
   buttonBackground: "#ffffff",
-  buttonText: "#8d9e84",
+  buttonText: "#b8c3b1",
   buttonHoverBackground: "#42503f",
   buttonHoverText: "#ffffff",
   toggleBg: "#1a1a1a",
@@ -20,7 +20,7 @@ export const darkTheme = {
   buttonText: "#f5f5f5",
   buttonHoverBackground: "#222",
   buttonHoverText: "#ffffff",
-  toggleBg: "#8d9e84",
+  toggleBg: "#b8c3b1",
   toggleHandle: "#ccc",
   headerBg: "#3f3f2f", // Mörk bakgrund för headern
   headerText: "#ffffff", // Textfärg för headern
